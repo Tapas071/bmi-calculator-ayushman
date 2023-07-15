@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+    <link rel="icon" href="bmi logo.png" type="image/x-icon">
+</head>
+<style>
+    *{
+        margin: 0;padding: 0;
+    }
+    main{
+        background-image: linear-gradient(to right, lightblue , rgb(255, 255, 255));
+        height: 270vh;width: 60vw;
+        /* background-color: lightblue; */
+
+        justify-content: center;
+        border-radius: 0 0 30px 10px;
+        
+        
+        
+    }
+    
+    #header{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-top: 40px;
+        font-size: xx-large;
+        font-weight: 800;
+    }
+    
+    .text{
+
+        font-size: x-large;
+        width: 90vw;
+    }
+    .container{
+        margin-left: 20px;
+    }
+    .main-box{
+        background-color: rgba(158, 172, 179, 0.384);
+        height: 300px;width: 600px;
+        margin-left: 30%;
+        margin-top: 20px;
+        border-radius: 10px;
+        /* display:flex; */
+        justify-content: center;
+        font-weight:400;
+        font-size: x-large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-top: 20px;
+        padding: 50px;
+        /* background-color: black; */
+    }
+    input{
+        height: 30px;width: 80px;
+        /* padding-left: 45%; */
+    }
+    #details{
+        /* background-color: red; */
+        height: 90px;
+        width: 600px;
+        font-weight: 900;
+        
+        
+    }
+    .height-weight-text{
+        font-size: small;
+        padding-top: -30px;
+    }
+    
+    
+    .form-parent{
+        display:flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* background-color: brown; */
+        height: 200px;
+    }
+    #height{
+        width: 200px;
+    }
+    #weight{
+        width: 200px;
+    }
+    .display{
+        /* background-color: rgb(255, 255, 255); */
+        /* background-color: rgba(158, 172, 179, 0.384); */
+        height: 200px;width: 200px;
+        position: relative;
+        left: 170px;
+        top: 30px;
+        font-size: large;
+        
+    }
+    #Submit{
+        background-color: #0a81d1;
+        border-radius: 10px;
+        height: 40px;width: 100px;
+    }
+    #Submit:hover{
+        cursor:grab;
+        background-color: #0d6199;
+    }
+    #imge{
+        height: 340px;width: 460px;
+        margin-top: 50px;
+    }
+    #h{
+        margin-top: 160px;
+        margin-left: 5%;
+    }
+    #para{
+        width: 90vw;
+        /* font-weight:900; */
+        font-size: large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 5%;
+    }
+    #h-2{
+        margin-top: 60px;
+        margin-left: 10%;
+    }
+    #para-2{
+        width: 90vw;
+        /* font-weight:900; */
+        font-size: large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 10%;
+    }
+    #h-3{
+        margin-top: 60px;
+        margin-left: 10%;
+    }
+    #para-3{
+        width: 90vw;
+        /* font-weight:900; */
+        font-size: large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 10%;
+    }
+    #h-4{
+        margin-top: 60px;
+        margin-left: 10%;
+    }
+    #para-4{
+        width: 90vw;
+        /* font-weight:900; */
+        font-size: large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 10%;
+    }
+    #h-5{
+        margin-top: 60px;
+        margin-left: 5%;
+    }
+    #para-5{
+        width: 90vw;
+        /* font-weight:900; */
+        font-size: large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 5%;
+    }
+    .features{
+        height: 200px;width: 98vw;
+        background-color: red;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    span{
+        height: 200px;width: 30vw;
+        background-color: yellow;
+        /* padding-left: 100px; */
+    }
+    .copyright{
+        height: 30px;
+        width: 90vw;
+        /* background-color: black; */
+        /* background-image: linear-gradient(to right, lightblue , rgb(255, 255, 255)); */
+        margin-top: 60px;
+    }
+    .copyright{
+        display: flex;justify-content: center;align-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <main>
+        <div class="container">
+            <div id="header">Body Mass Index Calculator</div>
+
+            <div class="text">
+                Better understand your weight with respect to your height using our Body Mass Index (BMI) Calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being 
+            </div>
+        </div>
+
+
+        <div class="main-box">
+            <div id="details">Enter your details below: </div>
+
+
+            <div class="form-parent">
+
+                <div class="form">
+                    <label for="height" class="height-weight-text">HEIGHT(in metres)</label><br>
+                    <input type="number" id="height" name="height" required><br>
+                    <label for="weight" class="height-weight-text">WEIGHT(in kilogramme)</label><br>
+                    <input type="number" id="weight" name="weight" required>
+
+
+
+                </div>
+                                           
+                <div class="display">
+                    Welcome!
+                    Enter your height and weight and you will see your BMI result here
+                </div>
+
+
+            </div>
+
+            <!-- <button id="Submit">
+                Submit
+            </button> -->
+
+            <input type="submit" id="Submit">
+
+
+
+            
+        </div>
+           
+        
+       
+        <h1 id="h">What your BMI result means</h1>
+
+        <p id="para">
+            A BMI range of 18.5 to 24.9 is considered a 'healthy weight'. Maintaining a healthy weight may lower your chances of experiencng health issues later on, such as obesity and type II diabetes. Aim for a nutritious diet with reduced fat and sugar content, incorporating amplae fruits and vegetables.Additionally, strive for regular physical activity, ideally about 30 minutes daily, about five days a week.
+        </p>
+        
+        <h2 id="h-2">Healthy eating</h4>
+
+        <p id="para-2">
+            Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity and mood
+        </p>
+        <h2 id="h-3">Regular exercise</h4>
+
+        <p id="para-3">
+            Execise improves fitness, aids weight control,elevates mood, and reduces disease risk,fostering wellness and longetivity
+        </p>
+        <h2 id="h-4">Adequate sleep</h4>
+
+        <p id="para-4">
+            Sleep enhancs mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuventaion
+        </p>
+
+      
+        <h1 id="h-5">Limitations of BMI</h1>
+
+        <p id="para-5">
+            Although BMI is often a practical indiacator of healthy weight, it is not sulted for every person. Specific groups should carefully consider their BMI outcomes, and in certain cases,the measurements may not be beneficial to use 
+        </p>
+        
+        <!-- <div class="meaning">
+            <div class="pic">
+                <img src="bmi logo.png" alt="" id="imge">
+            </div>
+    
+        </div> -->
+        <div class="copyright">
+            <p>made with ❤️ by Ayushman Gupta &#169
+                <span> <a href="https://github.com/Tapas071">Tapas 071</a></span>
+            </p>
+        </div>
+        
+    </main>
+
+
+
+
+  
+    <script src="index.js"></script>
+</body>
+</html>
